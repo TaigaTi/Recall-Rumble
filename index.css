@@ -1,0 +1,21 @@
+.game-container {
+    height:100vh;
+    width:100vw;
+}
+
+.difficulty-container {
+    border: 2px blue solid;
+}
+
+.board-container {
+    border: 2px red dotted;
+}
+
+.card {
+    width: 80%;
+    font-size: 10vh;
+    font-weight: bolder;
+    padding: 1.5vw 0vw;
+    margin: 1vw 0vw;
+    text-align: center;
+}
