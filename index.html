@@ -4,42 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recall Rumble</title>
-    <link rel="stylesheet" href="index.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="index.css" />
     <script src="index.js"></script>
   </head>
 
   <body style="background-color: #6b3888">
     <div class="row game-container">
       <!-- Difficulty Selection -->
-      <div class="col-4 difficulty-container">
-        <div class="row d-flex difficulty-selection">
-          <div class="col-5 difficulty-selection">
-            <div class="row diff-title">
+      <div class="col-4 pt-4 diff-container">
+        <div class="row gy-7 pt-5"></div>
+        <div class="row mt-2"></div>
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-5 diff-selection">
+            <div class="row diff-title text-center">
               <h2>DIFFICULTY</h2>
             </div>
 
-            <div class="row easy">
-              <button id="easy" type="button">Easy</button>
+            <div class="row pt-2 d-flex justify-content-center easy">
+              <button id="easy" class="diff-button" type="button">Easy</button>
             </div>
 
-            <div class="row medium">
-              <button id="medium" type="button">Medium</button>
+            <div class="row d-flex justify-content-center medium">
+              <button id="medium" class="diff-button" type="button">
+                Medium
+              </button>
             </div>
 
-            <div class="row hard">
-              <button id="hard" type="button">Hard</button>
+            <div class="row d-flex justify-content-center hard">
+              <button id="hard" class="diff-button" type="button">Hard</button>
             </div>
           </div>
         </div>
 
         <!-- Game Icon -->
-        <div class="row icon">
+        <div class="row p-5 d-flex justify-content-center icon-container">
           <img
             id="game-icon"
             src="images/icon-transparent.png"
@@ -50,66 +55,69 @@
 
       <div class="col board-container">
         <!-- Game Title -->
-        <div class="row game-title">
-          <h1>Recall Rumble</h1>
+        <div class="row pt-3 text-center game-title">
+          <div class="col-3 d-flex justify-content-end lightning-left"><img src="images/lightning.png" alt="Lightning Bolt" width="25%"></div>
+          <div class="col"><h1>Recall Rumble</h1></div>
+          <div class="col-3 d-flex justify-content-start"><img src="images/lightning.png" alt="Lightning Bolt" width="25%"></div>
         </div>
 
-        <div class="row board">
+        <div class="row d-flex pt-3 justify-content-center board">
           <!-- Row 1 -->
-          <div class="row row1">
-            <div class="col">
+          <div class="row row1 d-flex justify-content-center">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
-            <div class="col">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
-            <div class="col">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
-            <div class="col">
-              <div class="card">?</div>
-            </div>
-            <div class="col">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
           </div>
 
           <!-- Row 2 -->
-          <div class="row row2">
-            <div class="col">
+          <div class="row row2 d-flex justify-content-center">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
-            <div class="col">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
-            <div class="col">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
-            <div class="col">
-              <div class="card">?</div>
-            </div>
-            <div class="col">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
           </div>
 
-          <!-- Row 1 -->
-          <div class="row row3">
-            <div class="col">
+          <!-- Row 3 -->
+          <div class="row row3 d-flex justify-content-center">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
-            <div class="col">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
-            <div class="col">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
-            <div class="col">
+            <div class="col-2 gb-3 mb-3 text-center">
               <div class="card">?</div>
             </div>
-            <div class="col">
-              <div class="card">?</div>
-            </div>
+          </div>
+        </div>
+
+        <!-- Score -->
+        <div class="row pt-2">
+          <div class="col score">
+            <h3>Score:</h3>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <button class="new-button" type="button">New Game</button>
           </div>
         </div>
       </div>
