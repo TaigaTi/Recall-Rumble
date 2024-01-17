@@ -15,36 +15,54 @@
   </head>
 
   <body style="background-color: #6b3888">
+    <!-- Game Icon -->
+    <div
+      class="row icon-container mt-3 d-flex justify-content-center d-sm-none d-block"
+    >
+      <img
+        id="mobile-game-icon"
+        class="image-fluid"
+        src="images/icon-transparent.png"
+        alt="Boxing Brain"
+      />
+    </div>
+
     <div class="row game-container">
       <!-- Difficulty Selection -->
-      <div class="col-4 pt-4 diff-container">
-        <div class="row gy-7 pt-5"></div>
+      <div class="col-md-4 diff-container pt-sm-4 order-2 order-md-1">
+        <div class="row pt-sm-5"></div>
         <div class="row mt-2"></div>
 
         <div class="row d-flex justify-content-center">
-          <div class="col-5 diff-selection">
+          <div class="col-9 col-sm-5 diff-selection">
             <div class="row diff-title text-center">
               <h2>DIFFICULTY</h2>
             </div>
 
-            <div class="row pt-2 d-flex justify-content-center easy">
-              <button id="easy" class="diff-button" type="button">Easy</button>
-            </div>
-
-            <div class="row d-flex justify-content-center medium">
-              <button id="medium" class="diff-button" type="button">
-                Medium
-              </button>
-            </div>
-
-            <div class="row d-flex justify-content-center hard">
-              <button id="hard" class="diff-button" type="button">Hard</button>
+            <div class="row easy pt-2 d-flex justify-content-center">
+              <div class="col-4 col-sm-12">
+                <button id="easy" class="diff-button" type="button">
+                  Easy
+                </button>
+              </div>
+              <div class="col-4 col-sm-12">
+                <button id="medium" class="diff-button" type="button">
+                  Medium
+                </button>
+              </div>
+              <div class="col-4 col-sm-12">
+                <button id="hard" class="diff-button" type="button">
+                  Hard
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Game Icon -->
-        <div class="row p-5 d-flex justify-content-center icon-container">
+        <div
+          class="row icon-container p-5 d-flex justify-content-center d-none d-sm-block"
+        >
           <img
             id="game-icon"
             src="images/icon-transparent.png"
@@ -53,71 +71,92 @@
         </div>
       </div>
 
-      <div class="col board-container">
+      <div class="col board-container order-1 order-md-2">
         <!-- Game Title -->
-        <div class="row pt-3 text-center game-title">
-          <div class="col-3 d-flex justify-content-end lightning-left"><img src="images/lightning.png" alt="Lightning Bolt" width="25%"></div>
-          <div class="col"><h1>Recall Rumble</h1></div>
-          <div class="col-3 d-flex justify-content-start"><img src="images/lightning.png" alt="Lightning Bolt" width="25%"></div>
-        </div>
-
-        <div class="row d-flex pt-3 justify-content-center board">
-          <!-- Row 1 -->
-          <div class="row row1 d-flex justify-content-center">
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
+        <div class="row pt-3 text-center header">
+          <div
+            class="col-4 lightning-left p-0 d-flex justify-content-end d-none d-sm-block"
+          >
+            <img
+              src="images/lightning.png"
+              alt="Lightning Bolt"
+              width="60px"
+              height="35px"
+            />
           </div>
-
-          <!-- Row 2 -->
-          <div class="row row2 d-flex justify-content-center">
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
-          </div>
-
-          <!-- Row 3 -->
-          <div class="row row3 d-flex justify-content-center">
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
-            <div class="col-2 gb-3 mb-3 text-center">
-              <div class="card">?</div>
-            </div>
+          <div class="col px-0 game-title"><h1>Recall Rumble</h1></div>
+          <div
+            class="col-4 lightning-right p-0 d-flex justify-content-start d-none d-sm-block"
+          >
+            <img
+              src="images/lightning.png"
+              alt="Lightning Bolt"
+              width="60px"
+              height="35px"
+            />
           </div>
         </div>
 
         <!-- Score -->
-        <div class="row pt-2">
+        <div class="row pt-1">
           <div class="col score">
             <h3>Score:</h3>
           </div>
           <div class="col d-flex justify-content-end">
             <button class="new-button" type="button">New Game</button>
+          </div>
+        </div>
+
+        <!-- Board -->
+        <div class="row board d-flex pt-3 justify-content-center">
+          <div class="col order-1 order-md-2">
+            <!-- Row 1 -->
+            <div class="row row1 d-flex justify-content-center">
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row row2 d-flex justify-content-center">
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="row row3 d-flex justify-content-center">
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+              <div class="col-2 gb-3 mb-3 text-center">
+                <div class="card">?</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

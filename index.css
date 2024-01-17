@@ -1,6 +1,5 @@
 .game-container {
   height: 100vh;
-  width: 100vw;
   color: white;
 }
 
@@ -31,7 +30,7 @@
   background-color: #e84598;
   color: white;
   font-weight: 500;
-  font-size: 1.3vw;
+  font-size: 1rem;
   letter-spacing: 0.05vw;
 }
 
@@ -42,13 +41,13 @@
 
 .new-button {
   margin-right: 10vw;
-  padding: 0.3vw 1.2vw;
+  padding: 0.3vw 2vw;
   border-radius: 5vw;
   border: none;
   background-color: #fbc646;
   color: #6b3888;
   font-weight: 500;
-  font-size: 1.3vw;
+  font-size: 15px;
   letter-spacing: 0.05vw;
 }
 
@@ -66,4 +65,10 @@
 .lightning-left {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+#mobile-game-icon{
+  width: 20vw;
+  padding: 0;
+  margin: 0;
 }
