@@ -75,7 +75,7 @@
 
 @media only screen and (max-width: 768px) {
   .board {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .game-container {
     height: 0vh;
