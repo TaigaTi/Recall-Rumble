@@ -75,9 +75,24 @@
 
 @media only screen and (max-width: 768px) {
   .board {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
   }
+
   .game-container {
     height: 0vh;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+
+  }
+
+  .card {
+    padding: 1.2vw 0vw;
+    margin: 0vw -1.5vw -1.5vw -1.5vw; 
+
+  }
+
+  .new-button {
+    padding: 0vw 3vw;
+    font-size: 14px;
   }
 }
