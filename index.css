@@ -126,6 +126,10 @@ font-weight: bolder;
   transform: rotateY(0deg);
 }
 
+.fruits {
+  width: 90%;
+}
+
 @media only screen and (max-width: 600px) {
   .new-button {
     padding: 0vw 3vw;
