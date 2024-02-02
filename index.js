@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function populateBoard() {
     let cardsFront = document.getElementsByClassName("card-inner");
     let images = [
-      "/images/apple.png",
-      "/images/banana.png",
-      "/images/coconut.png",
-      "/images/grapes.png",
-      "/images/orange.png",
-      "/images/watermelon.png",
+      "images/apple.png",
+      "images/banana.png",
+      "images/coconut.png",
+      "images/grapes.png",
+      "images/orange.png",
+      "images/watermelon.png",
     ];
 
     let imageCounts = {};
