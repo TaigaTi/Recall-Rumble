@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     scoreDiv[0].textContent = "Score: " + score;
   }
 
-   // Populate the back of the cards with images
-   function populateBoard() {
+  // Populate the back of the cards with images
+  function populateBoard() {
     let cardsFront = document.getElementsByClassName("card-inner");
     let images = [
       "images/apple.png",
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const card1 = flipped[0];
           const card2 = flipped[1];
           if (score > 0) {
-            score-=1;
+            score -= 1;
           }
           printScore();
 
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (flipped.length == 2 && getMatch(flipped)) {
           const card1 = flipped[0];
           const card2 = flipped[1];
-          score+=5;
+          score += 5;
           printScore();
 
           card1.removeEventListener("click", flipCard);
@@ -93,6 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
           // Reset flip count
           flipped.length = 0;
         }
+
+        gameOver();
       });
     }
   }
@@ -109,7 +111,53 @@ document.addEventListener("DOMContentLoaded", function () {
     return false;
   }
 
+  // Make all cards face down
+  function resetCards() {
+    let flipped = document.getElementsByClassName("card-flipped");
+
+    for (let i = flipped.length - 1; i >= 0; i--) {
+      flipped[i].classList.remove("card-flipped");
+    }
+  }
+
+  function newGame() {
+    let newGame = document.getElementsByClassName("new-button");
+    let cards = document.getElementsByClassName("card-inner");
+
+    newGame[0].addEventListener("click", function () {
+      resetCards();
+
+      // Reset score
+      score = 0;
+      printScore();
+
+      // Remove old card images
+      setTimeout(function () {
+        for (let i = 0; i < cards.length; i++) {
+          let imgElement = cards[i].querySelector("img");
+          if (imgElement) {
+            cards[i].removeChild(imgElement);
+          }
+        }
+
+        // Populate new board after removing child images
+        populateBoard();
+      }, 500);
+    });
+  }
+
+  function gameOver() {
+    let faceUp = document.getElementsByClassName("card-flipped");
+
+    if(faceUp.length == cards.length) {
+      setTimeout(function() {
+        alert("You win!")
+      }, 500);
+    }
+  }
+
   printScore();
   populateBoard();
   flipCard();
+  newGame();
 });
