@@ -2,6 +2,54 @@ document.addEventListener("DOMContentLoaded", function () {
   let cards = document.getElementsByClassName("card");
   let flipped = [];
   let score = 0;
+  let isGameOver = false;
+  let gameMode = "easy";
+  const gameModes = new Map();
+
+  gameModes.set("easy", 9);
+  gameModes.set("medium", 12);
+  gameModes.set("hard", 16);
+
+  // Pick a game mode
+  function setGameMode() {
+    let modeButtons = [];
+
+    for (let mode of gameModes.keys()) {
+      modeButtons.push(document.getElementById(mode));
+    }
+    
+    // Set the initial game mode
+    for (let button of modeButtons) {
+      if (button.id == gameMode) {
+        button.classList.add("current-game-mode");
+      }
+    }
+
+    // Check for game mode changes
+    for (let button of modeButtons) {
+      button.addEventListener("click", function () {
+        button.classList.add("current-game-mode");
+        resetButtons(modeButtons, button);
+        gameMode = button.id;
+        renderCards();
+      });
+    }
+  }
+
+  // Reset button colours if not selected
+  function resetButtons(modeButtons, selected) {
+    for (let button of modeButtons) {
+      if (selected != button) {
+        button.classList.remove("current-game-mode");
+      }
+    }
+  }
+
+  function renderCards() {
+    let numberOfCards = gameModes.get(gameMode);
+
+    numberOfCards ? console.log(numberOfCards) : console.log("no number set");
+  }
 
   // Output current score to the screen
   function printScore() {
@@ -23,13 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let imageCounts = {};
 
-    for (let i = 0; i < cardsFront.length; i++) {
+    for (let card of cardsFront) {
       let img = document.createElement("img");
       let randomImage = getRandomImage(images, imageCounts);
 
       img.src = randomImage;
       img.classList = "fruits";
-      cardsFront[i].appendChild(img);
+      card.appendChild(img);
     }
   }
 
@@ -52,15 +100,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Flip a card when selected
   function flipCard() {
-    for (let i = 0; i < cards.length; i++) {
-      cards[i].addEventListener("click", function () {
+    for (let card of cards) {
+      card.addEventListener("click", function () {
         // Flip a card if chosen
-        if (
-          flipped.length < 2 &&
-          !cards[i].classList.contains("card-flipped")
-        ) {
-          cards[i].classList.add("card-flipped");
-          flipped.push(cards[i]);
+        if (flipped.length < 2 && !card.classList.contains("card-flipped")) {
+          card.classList.add("card-flipped");
+          flipped.push(card);
         }
 
         // If 2 cards flipped and they aren't a match
@@ -149,13 +194,17 @@ document.addEventListener("DOMContentLoaded", function () {
   function gameOver() {
     let faceUp = document.getElementsByClassName("card-flipped");
 
-    if(faceUp.length == cards.length) {
-      setTimeout(function() {
-        alert("You win!")
+    if (faceUp.length == cards.length && !isGameOver) {
+      setTimeout(function () {
+        alert("You win!");
       }, 500);
+
+      isGameOver = true;
     }
   }
 
+  setGameMode();
+  renderCards();
   printScore();
   populateBoard();
   flipCard();
