@@ -12,6 +12,8 @@
     />
     <link rel="stylesheet" href="index.css" />
     <script src="index.js"></script>
+    <script src="renderModes.js"></script>
+    <script src="gameState.js"></script>
   </head>
 
   <body style="background-color: #6b3888">
@@ -37,7 +39,7 @@
                 <div class="row diff-title text-center">
                   <h2>DIFFICULTY</h2>
                 </div>
-  
+
                 <div class="row easy pt-2 d-flex justify-content-center">
                   <div class="col-4 col-sm-12">
                     <button id="easy" class="diff-button" type="button">
@@ -57,7 +59,7 @@
                 </div>
               </div>
             </div>
-  
+
             <!-- Game Icon -->
             <div
               class="row icon-container p-5 d-flex justify-content-center d-none d-sm-block"
@@ -69,7 +71,7 @@
               />
             </div>
           </div>
-  
+
           <div class="col board-container order-1 order-md-2">
             <!-- Game Title -->
             <div class="row pt-3 text-center header">
@@ -95,128 +97,25 @@
                 />
               </div>
             </div>
-  
+
             <!-- Score -->
             <div class="row pt-1">
-              <div class="col score" id = "score">
+              <div class="col score" id="score">
                 <h3>Score:</h3>
               </div>
               <div class="col d-flex justify-content-end">
                 <button class="new-button" type="button">New Game</button>
               </div>
             </div>
-  
-            <div class="container">
+
+            <div class="container d-flex justify-content-center">
               <!-- Board -->
               <div class="row board d-flex pt-3 justify-content-center">
-                <div class="col order-1 order-md-2">
-                  <!-- Row 1 -->
-                  <div class="row row1 d-flex justify-content-center">
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-  
-                  <!-- Row 2 -->
-                  <div class="row row2 d-flex justify-content-center">
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-  
-                  <!-- Row 3 -->
-                  <div class="row row3 d-flex justify-content-center">
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-3 col-md-2 gb-3 gx-2 gx-md-3 mb-2 mb-md-3 text-center">
-                      <div class="card">
-                        <div class="card-inner">
-                          <div class="card-face card-front">?</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="col card-rows order-1 order-md-2 d-flexjustify-content-center">
+                  <div class="row row1 d-flex justify-content-center"></div>
+                  <div class="row row2 d-flex justify-content-center"></div>
+                  <div class="row row3 d-flex justify-content-center"></div>
+                  <div class="row row4 d-flex justify-content-center"></div>
                 </div>
               </div>
             </div>

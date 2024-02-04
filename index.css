@@ -128,12 +128,17 @@ font-weight: bolder;
 }
 
 .fruits {
-  width: 90%;
+  max-height: 99%;
+  max-width: 98%;
 }
 
 .current-game-mode {
   background-color: #7139a1;
   border: 1px solid rgb(190, 111, 226);
+}
+
+.board {
+  width: 95%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -149,4 +154,9 @@ font-weight: bolder;
   .card {
     height: 17vh;
   }
+
+  .board {
+    width: auto;
+  }
+  
 }
