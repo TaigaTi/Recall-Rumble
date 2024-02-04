@@ -23,7 +23,7 @@ function setGameMode(gameModes, gameMode, renderCards, resetScore) {
       gameMode = button.id;
       renderCards(gameMode);
     });
-  } 
+  }
   return gameMode;
 }
 
@@ -46,13 +46,18 @@ function newGame(resetCards, gameMode, resetScore, renderCards) {
 }
 
 // Handle game over
-function gameOver(isGameOver, gameMode, gameModes) {
+function gameOver(
+  isGameOver,
+  gameMode,
+  gameModes,
+  resetCards,
+  resetScore,
+  renderCards
+) {
   let faceUp = document.getElementsByClassName("card-flipped");
 
   if (faceUp.length == gameModes.get(gameMode) && !isGameOver) {
-    setTimeout(function () {
-      alert("You win!");
-    }, 500);
+    gameOverMessage(resetCards, gameMode, resetScore, renderCards);
 
     isGameOver = true;
   }
@@ -71,4 +76,32 @@ function resetButtons(modeButtons, selected) {
 function printScore(score) {
   let scoreDiv = document.getElementById("score").getElementsByTagName("h3");
   scoreDiv[0].textContent = "Score: " + score;
+}
+
+function gameOverMessage(resetCards, gameMode, resetScore, renderCards) {
+  let myModal = document.getElementById("exampleModalCenter");
+  let button = document.getElementById("new-game");
+  let modalVideo = document.getElementById("modalVideo");
+
+  $(myModal).modal("show");
+
+  setTimeout(function () {
+    // Autoplay the video
+    modalVideo.play();
+  }, 420);
+
+  button.onclick = function () {
+    setTimeout(function () {
+      resetCards();
+    }, 300);
+
+    // Reset score
+    let score = resetScore();
+    printScore(score);
+
+    // Remove old cards
+    setTimeout(function () {
+      renderCards(gameMode);
+    }, 600);
+  };
 }

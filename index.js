@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
           flipped.length = 0;
         }
 
-        gameOver(isGameOver, gameMode, gameModes);
+        gameOver(isGameOver, gameMode, gameModes, resetCards, resetScore, renderCards);
       });
     }
   }
