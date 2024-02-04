@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
           flipped.length = 0;
         }
 
-        gameOver(isGameOver, gameMode, gameModes);
+        gameOver(isGameOver, gameMode, gameModes, resetCards, resetScore, renderCards);
       });
     }
   }
@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return score;
   }
 
+  gameOverMessage(resetCards, gameMode, resetScore, renderCards);
   gameMode = setGameMode(gameModes, gameMode, renderCards, resetScore);
   renderCards(gameMode);
   printScore(score);
