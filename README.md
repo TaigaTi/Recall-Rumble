@@ -1,8 +1,8 @@
+<img src="https://taigati.github.io/Recall-Rumble/images/icon-transparent.png" alt="Image Alt Text" width="150">
+
 # Recall Rumble
 
 Recall Rumble is an engaging memory-matching game designed to test your recall abilities! Challenge yourself and see how well you can match your cards.
-
-![Recall Rumble Logo](https://taigati.github.io/Recall-Rumble/images/icon-transparent.png)
 
 ## Getting Started
 
