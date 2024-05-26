@@ -57,7 +57,7 @@
 
 .card {
   width: 100%;
-  height: 23vh;
+  height: 20vh;
   background-color: #f0c1d9;
   color: #db7bab;
   font-size: 10vh;
@@ -65,6 +65,9 @@
   border: 0.5vw solid #db8fb5;
   border-radius: 1.5vw;
   perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card:hover {
@@ -122,14 +125,14 @@
   background-color: #f0c1d9;
   color: #db7bab;
   font-size: 10vh;
-font-weight: bolder;
+  font-weight: bolder;
   border-radius: 1.1vw;
   transform: rotateY(0deg);
 }
 
 .fruits {
-  max-height: 99%;
-  max-width: 98%;
+  max-height: 90%;
+  max-width: 90%;
 }
 
 .current-game-mode {
@@ -138,11 +141,11 @@ font-weight: bolder;
 }
 
 .board {
-  width: 95%;
+  width: 100%;
 }
 
 #new-game {
-  width:100%;
+  width: 100%;
   padding: 0.3vw 1.2vw;
 }
 
@@ -165,7 +168,6 @@ font-weight: bolder;
   padding-left: 10px;
   font-size: 1.5vw;
 }
-
 
 @media only screen and (max-width: 600px) {
   .new-button {
@@ -192,15 +194,15 @@ font-weight: bolder;
     font-weight: bolder;
     background-color: white;
   }
-  
+
   #exampleModalLongTitle {
     color: #6b3888;
     font-size: 20px;
   }
 
   #new-game {
-    width:50%;
+    width: 50%;
     padding: 2px;
     margin-left: 26vw;
-  }  
+  }
 }
