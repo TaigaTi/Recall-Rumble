@@ -21,4 +21,6 @@ Recall Rumble is an engaging memory-matching game designed to test your recall a
 
 Did you know that all the images and animations in Recall Rumble were handcrafted by the developer? 🎨 That's right! Every card design, animation, and logo was created from scratch.
 
+Design Process: https://youtu.be/_VOvIqI8cU4?si=SiikMDn52TEQlt5W
+
 Enjoy playing Recall Rumble! Happy matching! 🎮🔍
